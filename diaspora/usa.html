@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diaspora USA — Avocat Viorel Dodan | ELITE EUROPE</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">VD</div>
+      <div class="brandtext">
+        <div class="name">Avocat Viorel Dodan</div>
+        <div class="tag">ELITE EUROPE</div>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="/#diaspora">← Diaspora</a>
+      <a href="/#contact" id="navContact">Contact</a>
+    </nav>
+
+    <div class="lang">
+      <button type="button" id="btnRO" onclick="setLang('ro')">RO</button>
+      <button type="button" id="btnRU" onclick="setLang('ru')">RU</button>
+      <button type="button" id="btnEN" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="min-height:52vh">
+  <div class="container hero-inner">
+    <div class="kicker">
+      <span class="dot"></span>
+      <span id="kicker">Diaspora</span>
+      <span class="pill" id="badge">USA</span>
+    </div>
+
+    <h1 class="h1" id="pageTitle">USA — ghid juridic complet</h1>
+    <p class="sub" id="pageSub">Divorț, pensie, partaj, custodie, moșteniri, adopție, violență în familie — pași clari și strategie.</p>
+
+    <div class="cta">
+      <a class="btn primary" href="/#contact" id="cta1">Scrie pe WhatsApp</a>
+      <a class="btn" href="#ghid" id="cta2">Vezi ghid</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ghid">
+  <div class="container">
+
+    <div class="card grid2">
+      <div class="pad">
+        <div class="head">
+          <h2 id="sec1Title">Cum lucrăm dacă ești în USA</h2>
+          <p class="muted" id="sec1Sub">Online rapid + documente + pași concreți. Reprezentare în Moldova când e necesar.</p>
+        </div>
+
+        <ul class="list" id="sec1List">
+          <li>Mesaj WhatsApp: „USA + problema pe scurt”.</li>
+          <li>Primești lista de acte + plan clar pe etape.</li>
+          <li>Consult online → strategie pentru Moldova (și elemente externe dacă apar).</li>
+          <li>Îți pregătesc documente și pașii fără drumuri inutile.</li>
+        </ul>
+
+        <div class="hr"></div>
+        <p class="muted" id="notice">Notă: Informațiile sunt orientative. Soluția exactă se stabilește după analiza actelor.</p>
+      </div>
+
+      <div class="media">
+        <img src="/images/diaspora-usa.webp" alt="USA">
+        <div class="media-overlay">
+          <div class="media-title" id="mediaTitle">USA</div>
+          <div class="media-sub" id="mediaSub">Pagină dedicată diasporei</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section"></div>
+
+    <div class="card pad">
+      <h2 id="divorceTitle">Divorț (USA ⇄ Moldova)</h2>
+      <p class="muted" id="divorceText">Stabilim actele necesare și strategia. Important: dovezi, copii, bunuri, comunicare. Scop: procedură sigură și rapidă.</p>
+    </div>
+
+    <div class="section"></div>
+
+    <div class="card pad">
+      <h2 id="supportTitle">Pensie de întreținere</h2>
+      <p class="muted" id="supportText">Construim dosarul cu venituri + cheltuieli + probe. Pentru diaspora, totul trebuie documentat clar.</p>
+    </div>
+
+    <div class="section"></div>
+
+    <div class="card pad">
+      <h2 id="inheritTitle">Moșteniri</h2>
+      <p class="muted" id="inheritText">Stabilim bunuri + acte lipsă + împuterniciri, pentru finalizare fără deplasări.</p>
+    </div>
+
+    <div class="section"></div>
+
+    <div class="card pad">
+      <h2 id="violenceTitle">Violență în familie</h2>
+      <p class="muted" id="violenceText">Siguranță + măsuri + probe + strategie. În urgență, acționăm imediat.</p>
+    </div>
+
+    <div class="section"></div>
+
+    <div class="card pad">
+      <h2 id="contactTitle">Contact rapid</h2>
+      <p class="muted" id="contactSub">Scrie pe WhatsApp cu text: „USA + problema pe scurt”.</p>
+      <div class="cta">
+        <a class="btn primary" href="/#contact" id="contactBtn">Deschide Contact</a>
+        <a class="btn" href="/" id="homeBtn">Înapoi la Home</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container foot">
+    <div>© <span class="gold">ELITE EUROPE</span> — Avocat Viorel Dodan</div>
+    <div id="footRight">Pagina dedicată: USA</div>
+  </div>
+</footer>
+
+<script>
+let LANG = localStorage.getItem("lang") || "ro";
+const T = {
+  ro: { navContact:"Contact", kicker:"Diaspora", badge:"USA", pageTitle:"USA — ghid juridic complet", pageSub:"Divorț, pensie, partaj, custodie, moșteniri, adopție, violență în familie — pași clari și strategie.", cta1:"Scrie pe WhatsApp", cta2:"Vezi ghid", sec1Title:"Cum lucrăm dacă ești în USA", sec1Sub:"Online rapid + documente + pași concreți. Reprezentare în Moldova când e necesar.", mediaTitle:"USA", mediaSub:"Pagină dedicată diasporei", notice:"Notă: Informațiile sunt orientative. Soluția exactă se stabilește după analiza actelor.", contactTitle:"Contact rapid", contactSub:"Scrie pe WhatsApp cu text: „USA + problema pe scurt”.", contactBtn:"Deschide Contact", homeBtn:"Înapoi la Home", footRight:"Pagina dedicată: USA" },
+  ru: { navContact:"Контакты", kicker:"Диаспора", badge:"США", pageTitle:"США — полный юридический гид", pageSub:"Развод, алименты, раздел имущества, опека, наследство, усыновление, домашнее насилие — понятные шаги и стратегия.", cta1:"Написать в WhatsApp", cta2:"Открыть гид", sec1Title:"Как мы работаем, если вы в США", sec1Sub:"Быстро онлайн + документы + конкретные шаги. Представительство в Молдове при необходимости.", mediaTitle:"США", mediaSub:"Страница для диаспоры", notice:"Примечание: информация ориентировочная. Точное решение — после проверки документов.", contactTitle:"Быстрый контакт", contactSub:"WhatsApp: «США + кратко проблема».", contactBtn:"Открыть Контакты", homeBtn:"Назад на Home", footRight:"Страница: США" },
+  en: { navContact:"Contact", kicker:"Diaspora", badge:"USA", pageTitle:"USA — complete legal guide", pageSub:"Divorce, child support, asset division, custody, inheritance, adoption, domestic violence — clear steps and strategy.", cta1:"Message on WhatsApp", cta2:"Open guide", sec1Title:"How we work if you are in the USA", sec1Sub:"Fast online workflow + documents + clear next steps. Moldova representation when needed.", mediaTitle:"USA", mediaSub:"Diaspora dedicated page", notice:"Note: information is general. A precise solution requires document review.", contactTitle:"Quick contact", contactSub:"WhatsApp: “USA + brief issue”.", contactBtn:"Open Contact", homeBtn:"Back to Home", footRight:"Page: USA" }
+};
+function $(id){ return document.getElementById(id); }
+function setLang(l){ LANG = l; localStorage.setItem("lang", l); apply(); }
+function apply(){
+  const t = T[LANG] || T.ro;
+  document.documentElement.lang = LANG;
+  $("btnRO").classList.toggle("active", LANG==="ro");
+  $("btnRU").classList.toggle("active", LANG==="ru");
+  $("btnEN").classList.toggle("active", LANG==="en");
+  $("navContact").textContent = t.navContact;
+  $("kicker").textContent = t.kicker;
+  $("badge").textContent = t.badge;
+  $("pageTitle").textContent = t.pageTitle;
+  $("pageSub").textContent = t.pageSub;
+  $("cta1").textContent = t.cta1;
+  $("cta2").textContent = t.cta2;
+  $("sec1Title").textContent = t.sec1Title;
+  $("sec1Sub").textContent = t.sec1Sub;
+  $("mediaTitle").textContent = t.mediaTitle;
+  $("mediaSub").textContent = t.mediaSub;
+  $("notice").textContent = t.notice;
+  $("contactTitle").textContent = t.contactTitle;
+  $("contactSub").textContent = t.contactSub;
+  $("contactBtn").textContent = t.contactBtn;
+  $("homeBtn").textContent = t.homeBtn;
+  $("footRight").textContent = t.footRight;
+}
+document.addEventListener("DOMContentLoaded", apply);
+</script>
+
+</body>
+</html>
