@@ -1,5 +1,4 @@
-- name: "galerie"
-  label: "Galerie"
+label: "Galerie"
   files:
     - name: "galerie"
       label: "Galerie site"
