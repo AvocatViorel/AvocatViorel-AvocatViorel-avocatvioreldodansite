@@ -147,43 +147,43 @@
     },
     "fallbackImage": "/images/diaspora-default.webp",
     "items": [
-      {
-        "slug": "italia",
-        "name": { "ro": "Italia", "ru": "Италия", "en": "Italy" },
-        "desc": { "ro": "Ghid complet: divorț, pensie, partaj, custodie.", "ru": "Полный гид: развод, алименты, раздел имущества.", "en": "Full guide: divorce, support, asset division." },
-        "image": "/images/diaspora-italy.webp"
-      },
-      {
-        "slug": "franta",
-        "name": { "ro": "Franța", "ru": "Франция", "en": "France" },
-        "desc": { "ro": "Dosare diaspora în Franța — pași clari.", "ru": "Дела во Франции — понятные шаги.", "en": "France cases — clear steps." },
-        "image": "/images/diaspora-france.webp"
-      },
-      {
-        "slug": "germania",
-        "name": { "ro": "Germania", "ru": "Германия", "en": "Germany" },
-        "desc": { "ro": "Acte, strategii, reprezentare — Germania.", "ru": "Документы, стратегия — Германия.", "en": "Docs & strategy — Germany." },
-        "image": "/images/diaspora-germany.webp"
-      },
-      {
-        "slug": "marea-britanie",
-        "name": { "ro": "Marea Britanie", "ru": "Великобритания", "en": "United Kingdom" },
-        "desc": { "ro": "Ghid diaspora UK — divorț, copii, acte.", "ru": "Гид UK — развод, дети, документы.", "en": "UK guide — divorce, kids, docs." },
-        "image": "/images/diaspora-uk.webp"
-      },
-      {
-        "slug": "usa",
-        "name": { "ro": "USA", "ru": "США", "en": "USA" },
-        "desc": { "ro": "SUA — strategie, acte, pași online.", "ru": "США — стратегия и документы.", "en": "USA — strategy and docs." },
-        "image": "/images/diaspora-usa.webp"
-      },
-      {
-        "slug": "moldova",
-        "name": { "ro": "Moldova", "ru": "Молдова", "en": "Moldova" },
-        "desc": { "ro": "Reprezentare și consultații în Chișinău.", "ru": "Представительство и консультации в Кишинёве.", "en": "Representation and consults in Chișinău." },
-        "image": "/images/diaspora-moldova.webp"
-      }
-    ]
+  {
+    "slug": "italia",
+    "name": { "ro": "Italia", "ru": "Италия", "en": "Italy" },
+    "desc": { "ro": "Ghid complet: divorț, pensie, partaj, custodie.", "ru": "Гид: развод, алименты, раздел имущества.", "en": "Guide: divorce, support, asset division." },
+    "image": "/images/diaspora-italy.webp"
+  },
+  {
+    "slug": "germania",
+    "name": { "ro": "Germania", "ru": "Германия", "en": "Germany" },
+    "desc": { "ro": "Acte, strategii, reprezentare — Germania.", "ru": "Документы и стратегия — Германия.", "en": "Docs & strategy — Germany." },
+    "image": "/images/diaspora-germany.webp"
+  },
+  {
+    "slug": "franta",
+    "name": { "ro": "Franța", "ru": "Франция", "en": "France" },
+    "desc": { "ro": "Dosare diaspora în Franța — pași clari.", "ru": "Дела во Франции — понятные шаги.", "en": "France cases — clear steps." },
+    "image": "/images/diaspora-france.webp"
+  },
+  {
+    "slug": "uk",
+    "name": { "ro": "Marea Britanie", "ru": "Великобритания", "en": "United Kingdom" },
+    "desc": { "ro": "Ghid diaspora UK — divorț, copii, acte.", "ru": "Гид UK — развод, дети, документы.", "en": "UK guide — divorce, kids, docs." },
+    "image": "/images/diaspora-uk.webp"
+  },
+  {
+    "slug": "usa",
+    "name": { "ro": "USA", "ru": "США", "en": "USA" },
+    "desc": { "ro": "SUA — strategie, acte, pași online.", "ru": "США — стратегия и документы.", "en": "USA — strategy and docs." },
+    "image": "/images/diaspora-usa.webp"
+  },
+  {
+    "slug": "moldova",
+    "name": { "ro": "Moldova", "ru": "Молдова", "en": "Moldova" },
+    "desc": { "ro": "Reprezentare și consultații în Chișinău.", "ru": "Представительство и консультации в Кишинёве.", "en": "Representation and consults in Chișinău." },
+    "image": "/images/diaspora-moldova.webp"
+  }
+]
   },
   "gallery": {
     "title": { "ro": "Galerie", "ru": "Галерея", "en": "Gallery" },
