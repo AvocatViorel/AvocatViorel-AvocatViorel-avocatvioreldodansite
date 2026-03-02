@@ -212,8 +212,8 @@ jobs:
           """)
 
           for p in ["about","services","fees","faq","contact","diaspora"]:
-              for lang in ["ro","ru","en"]:
-                  w(f"content/{lang}/{p}.md", f"---\\ntitle: \\"{p}\\"\\n---\\n")
+    for lang in ["ro","ru","en"]:
+        w(f"content/{lang}/{p}.md", f'---\ntitle: "{p}"\n---\n')
 
           w("admin/index.html", """<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admin</title></head>
           <body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script></body></html>
