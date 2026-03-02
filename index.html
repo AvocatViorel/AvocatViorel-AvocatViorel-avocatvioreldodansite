@@ -249,27 +249,37 @@ function renderServices(){
 }
 
 function renderDiaspora(){
-  safeText($("diasporaTitle"), pick(SITE?.diaspora?.title) || "Diaspora");
-  safeText($("diasporaSub"), pick(SITE?.diaspora?.subtitle) || "");
+  safeText($("diasporaTitle"), pick(SITE?.diaspora?.title));
+  safeText($("diasporaSub"), pick(SITE?.diaspora?.subtitle));
 
   const grid = $("diasporaGrid");
-  if(!grid) return;
   grid.innerHTML = "";
 
   const fallback = SITE?.diaspora?.fallbackImage || "/images/diaspora-default.webp";
-  const items = SITE?.diaspora?.items || [];
-  items.forEach(it=>{
+
+  (SITE?.diaspora?.items || []).forEach(it=>{
     const img = it.image || fallback;
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
+
+    // slug obligatoriu: italia, franta, germania...
+    const slug = it.slug || "";
+    const href = slug ? `/diaspora/${slug}.html` : "#";
+
+    const a = document.createElement("a");
+    a.href = href;
+    a.className = "card";
+    a.style.display = "block";
+
+    a.innerHTML = `
       <div class="thumb"><img src="${img}" alt=""></div>
       <div class="pad">
-        <h3>${it.name || ""}</h3>
-        <p class="muted">${it.desc || ""}</p>
+        <h3>${pick(it.name)}</h3>
+        <p class="muted">${pick(it.desc)}</p>
+        <div class="hr"></div>
+        <div class="muted" style="font-size:13px">→ ${LANG === "ru" ? "Открыть страницу" : (LANG === "en" ? "Open page" : "Deschide pagina")}</div>
       </div>
     `;
-    grid.appendChild(card);
+
+    grid.appendChild(a);
   });
 }
 
