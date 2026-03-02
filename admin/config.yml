@@ -1,16 +1,1 @@
-- name: "galerie"
-  label: "Galerie"
-  files:
-    - name: "galerie"
-      label: "Galerie site"
-      file: "content/galerie/galerie.json"
-      fields:
-        - { label: "Titlu", name: "title", widget: "string" }
-        - label: "Imagini"
-          name: "items"
-          widget: "list"
-          summary: "{{fields.caption}}"
-          fields:
-            - { label: "Imagine", name: "image", widget: "image" }
-            - { label: "Alt", name: "alt", widget: "string", required: false }
-            - { label: "Text sub poză", name: "caption", widget: "string", required: false }
+
