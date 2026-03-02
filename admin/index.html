@@ -3,19 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Admin — Avocat Viorel Dodan</title>
+  <title>Admin ELITE — Avocat Viorel Dodan</title>
   <link rel="stylesheet" href="/styles.css" />
   <style>
-    .admin-wrap{max-width:980px;margin:24px auto;padding:0 18px}
+    .admin-wrap{max-width:1040px;margin:24px auto;padding:0 18px}
     .admin-grid{display:grid;gap:12px}
     .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     @media(max-width:900px){.row{grid-template-columns:1fr}}
-    input, textarea{width:100%;padding:12px 12px;border-radius:14px;border:1px solid rgba(214,179,91,.28);background:rgba(17,19,24,.7);color:var(--text)}
+    input, textarea, select{
+      width:100%;padding:12px 12px;border-radius:14px;
+      border:1px solid rgba(214,179,91,.28);
+      background:rgba(17,19,24,.7);color:var(--text)
+    }
     textarea{min-height:110px;resize:vertical}
-    .btnbar{display:flex;gap:10px;flex-wrap:wrap}
+    .btnbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .tiny{font-size:12px;color:var(--muted)}
     .item{border:1px solid rgba(214,179,91,.22);border-radius:16px;padding:12px;background:rgba(17,19,24,.55)}
     .item h4{margin:0 0 8px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{
+      cursor:pointer;border:1px solid rgba(214,179,91,.22);
+      background:rgba(17,19,24,.55);color:var(--muted);
+      padding:10px 12px;border-radius:14px;font-weight:950
+    }
+    .tab.active{color:var(--text);border-color:rgba(214,179,91,.55)}
+    .help{margin-top:10px}
+    code{color:var(--gold)}
   </style>
 </head>
 <body>
@@ -24,7 +37,7 @@
       <div class="brand">
         <div class="logo">VD</div>
         <div class="brandtext">
-          <div class="name">Admin</div>
+          <div class="name">Admin ELITE</div>
           <div class="tag">ELITE EUROPE</div>
         </div>
       </div>
@@ -36,21 +49,31 @@
 
   <div class="admin-wrap">
     <div class="card pad">
-      <h2>Admin PRO (fără HTML)</h2>
-      <p class="muted">Editezi aici, apoi apeși <strong>Download site.json</strong> și încarci fișierul în GitHub la <code>/content/site.json</code>.</p>
+      <h2>Admin ELITE (RO / RU / EN)</h2>
+      <p class="muted">
+        Editezi aici, apoi apeși <strong>Download site.json</strong> și încarci fișierul în GitHub la <code>/content/site.json</code>.
+      </p>
 
       <div class="btnbar">
         <button class="btn primary" id="loadBtn" type="button">Load from site</button>
         <button class="btn ghost" id="downloadBtn" type="button">Download site.json</button>
         <button class="btn ghost" id="copyBtn" type="button">Copy JSON</button>
+        <div style="margin-left:auto" class="tabs">
+          <button class="tab active" id="tabRO" type="button" data-lang="ro">RO</button>
+          <button class="tab" id="tabRU" type="button" data-lang="ru">RU</button>
+          <button class="tab" id="tabEN" type="button" data-lang="en">EN</button>
+        </div>
       </div>
-      <p class="tiny">Tip: după Commit, Cloudflare Pages se actualizează automat.</p>
+
+      <div class="help tiny">
+        Tip: dacă pe domeniul GoDaddy încă nu merge, folosește temporar <code>https://avocatvioreldodan.pages.dev/admin/</code>.
+      </div>
     </div>
 
     <div class="admin-grid" style="margin-top:12px">
 
       <div class="card pad">
-        <h3>Contact</h3>
+        <h3>Contact (global)</h3>
         <div class="row">
           <div><div class="tiny">Telefon</div><input id="phone" placeholder="+373..." /></div>
           <div><div class="tiny">Email</div><input id="email" placeholder="email..." /></div>
@@ -87,8 +110,8 @@
       <div class="card pad">
         <h3>Servicii</h3>
         <div class="row">
-          <div><div class="tiny">Titlu</div><input id="servicesTitle" /></div>
-          <div><div class="tiny">Subtitlu</div><input id="servicesSub" /></div>
+          <div><div class="tiny">Titlu secțiune</div><input id="servicesTitle" /></div>
+          <div><div class="tiny">Subtitlu secțiune</div><input id="servicesSub" /></div>
         </div>
         <div style="margin-top:10px" class="btnbar">
           <button class="btn ghost" id="addService" type="button">+ Adaugă serviciu</button>
@@ -99,10 +122,13 @@
       <div class="card pad">
         <h3>Diaspora</h3>
         <div class="row">
-          <div><div class="tiny">Titlu</div><input id="diasporaTitle" /></div>
-          <div><div class="tiny">Subtitlu</div><input id="diasporaSub" /></div>
+          <div><div class="tiny">Titlu secțiune</div><input id="diasporaTitle" /></div>
+          <div><div class="tiny">Subtitlu secțiune</div><input id="diasporaSub" /></div>
         </div>
-        <div style="margin-top:10px"><div class="tiny">Fallback image</div><input id="diasporaFallback" placeholder="/images/diaspora-default.webp" /></div>
+        <div style="margin-top:10px">
+          <div class="tiny">Fallback image</div>
+          <input id="diasporaFallback" placeholder="/images/diaspora-default.webp" />
+        </div>
         <div style="margin-top:10px" class="btnbar">
           <button class="btn ghost" id="addCountry" type="button">+ Adaugă țară</button>
         </div>
@@ -112,8 +138,8 @@
       <div class="card pad">
         <h3>Galerie</h3>
         <div class="row">
-          <div><div class="tiny">Titlu</div><input id="galleryTitle" /></div>
-          <div><div class="tiny">Subtitlu</div><input id="gallerySub" /></div>
+          <div><div class="tiny">Titlu secțiune</div><input id="galleryTitle" /></div>
+          <div><div class="tiny">Subtitlu secțiune</div><input id="gallerySub" /></div>
         </div>
         <div style="margin-top:10px" class="btnbar">
           <button class="btn ghost" id="addGallery" type="button">+ Adaugă poză</button>
@@ -124,8 +150,9 @@
       <div class="card pad">
         <h3>JSON (preview)</h3>
         <textarea id="jsonPreview" style="min-height:260px"></textarea>
-        <p class="tiny">Nu edita aici. Doar previzualizare.</p>
+        <p class="tiny">Nu edita manual aici. Este doar previzualizare.</p>
       </div>
+
     </div>
   </div>
 
