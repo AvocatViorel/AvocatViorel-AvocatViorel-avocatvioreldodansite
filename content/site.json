@@ -7,16 +7,191 @@
   },
   "hero": {
     "ro": {
-      "kicker": "Test",
-      "badge": "OK",
-      "title": "Test JSON",
-      "subtitle": "Dacă vezi asta, JSON e valid și se încarcă."
+      "kicker": "Premium Dark",
+      "badge": "Lux • Gold",
+      "title": "Reprezentare juridică pentru Diaspora și Chișinău",
+      "subtitle": "Strategie clară, comunicare rapidă, rezultate. Online pentru diaspora, reprezentare în instanță în Moldova."
+    },
+    "ru": {
+      "kicker": "Премиум",
+      "badge": "Lux • Gold",
+      "title": "Юридическое представительство для диаспоры и Кишинева",
+      "subtitle": "Четкая стратегия, быстрая коммуникация, результат. Онлайн для диаспоры, представительство в суде в Молдове."
+    },
+    "en": {
+      "kicker": "Premium",
+      "badge": "Lux • Gold",
+      "title": "Legal representation for Diaspora and Chișinău",
+      "subtitle": "Clear strategy, fast communication, results. Online for diaspora, court representation in Moldova."
     }
   },
-  "about": { "title": { "ro": "Despre" }, "text": { "ro": "OK" }, "bullets": { "ro": ["OK"] }, "note": { "ro": "" } },
-  "services": { "title": { "ro": "Servicii" }, "subtitle": { "ro": "" }, "items": [] },
-  "fees": { "title": { "ro": "Onorarii" }, "text": { "ro": "" }, "cards": [] },
-  "faq": { "title": { "ro": "FAQ" }, "subtitle": { "ro": "" }, "items": [] },
-  "diaspora": { "title": { "ro": "Diaspora" }, "subtitle": { "ro": "" }, "fallbackImage": "/images/diaspora-default.webp", "items": [] },
-  "gallery": { "title": { "ro": "Galerie" }, "subtitle": { "ro": "" }, "items": [] }
+  "about": {
+    "title": { "ro": "Despre", "ru": "Обо мне", "en": "About" },
+    "text": {
+      "ro": "Sunt Avocat Viorel Dodan. Ofer asistență juridică clară, orientată spre rezultat, cu comunicare directă și termene respectate.",
+      "ru": "Я адвокат Виорел Додан. Предоставляю понятную юридическую помощь, ориентированную на результат, с прямой коммуникацией и соблюдением сроков.",
+      "en": "I am lawyer Viorel Dodan. I provide clear, results-oriented legal assistance with direct communication and respected deadlines."
+    },
+    "bullets": {
+      "ro": [
+        "Consultanță juridică (online / fizic)",
+        "Reprezentare în instanță",
+        "Dosare pentru diaspora (acte, procuri, litigii)"
+      ],
+      "ru": [
+        "Юридическая консультация (онлайн / офлайн)",
+        "Представительство в суде",
+        "Дела для диаспоры (документы, доверенности, споры)"
+      ],
+      "en": [
+        "Legal consultation (online / in person)",
+        "Court representation",
+        "Diaspora cases (documents, powers of attorney, disputes)"
+      ]
+    },
+    "note": { "ro": "", "ru": "", "en": "" }
+  },
+  "services": {
+    "title": { "ro": "Servicii", "ru": "Услуги", "en": "Services" },
+    "subtitle": {
+      "ro": "Selectează domeniul — îți răspund rapid cu pașii următori și estimare de timp.",
+      "ru": "Выберите направление — отвечу быстро с дальнейшими шагами и сроками.",
+      "en": "Choose the area — I’ll reply quickly with next steps and a timeline."
+    },
+    "items": [
+      {
+        "title": { "ro": "Dreptul familiei", "ru": "Семейное право", "en": "Family law" },
+        "text": {
+          "ro": "Divorț • partaj • pensie • custodie • măsuri de protecție.",
+          "ru": "Развод • раздел имущества • алименты • опека • защитные меры.",
+          "en": "Divorce • asset division • child support • custody • protection measures."
+        },
+        "image": "/images/service-divort.webp",
+        "waText": "familie"
+      },
+      {
+        "title": { "ro": "Consultanță juridică", "ru": "Юридическая консультация", "en": "Legal consultation" },
+        "text": {
+          "ro": "Analiză acte • strategie • pași clari • pregătire dosar.",
+          "ru": "Анализ документов • стратегия • четкие шаги • подготовка дела.",
+          "en": "Document review • strategy • clear steps • case preparation."
+        },
+        "image": "/images/service-consultanta.webp",
+        "waText": "consult"
+      },
+      {
+        "title": { "ro": "Civil & succesiuni", "ru": "Гражданские дела и наследство", "en": "Civil & inheritance" },
+        "text": {
+          "ro": "Litigii • succesiuni • datorii • contracte.",
+          "ru": "Споры • наследство • долги • договоры.",
+          "en": "Disputes • inheritance • debts • contracts."
+        },
+        "image": "/images/service-civil.webp",
+        "waText": "civil"
+      }
+    ]
+  },
+  "fees": {
+    "title": { "ro": "Onorarii", "ru": "Гонорары", "en": "Fees" },
+    "text": {
+      "ro": "Onorariile se stabilesc transparent, în funcție de complexitate și termen. Pentru diaspora, putem lucra integral online.",
+      "ru": "Гонорар определяется прозрачно — в зависимости от сложности и сроков. Для диаспоры можем работать полностью онлайн.",
+      "en": "Fees are set transparently depending on complexity and deadlines. For diaspora clients we can work fully online."
+    },
+    "cards": [
+      {
+        "title": { "ro": "Consultație", "ru": "Консультация", "en": "Consultation" },
+        "value": { "ro": "la cerere", "ru": "по запросу", "en": "on request" },
+        "sub": { "ro": "Online / Chișinău", "ru": "Онлайн / Кишинёв", "en": "Online / Chișinău" }
+      },
+      {
+        "title": { "ro": "Reprezentare", "ru": "Представительство", "en": "Representation" },
+        "value": { "ro": "la cerere", "ru": "по запросу", "en": "on request" },
+        "sub": { "ro": "Dosare + instanță", "ru": "Дела + суд", "en": "Cases + court" }
+      },
+      {
+        "title": { "ro": "Diaspora", "ru": "Диаспора", "en": "Diaspora" },
+        "value": { "ro": "la cerere", "ru": "по запросу", "en": "on request" },
+        "sub": { "ro": "Acte + consult + strategie", "ru": "Документы + консультация + стратегия", "en": "Docs + consult + strategy" }
+      }
+    ]
+  },
+  "faq": {
+    "title": { "ro": "FAQ", "ru": "Вопросы и ответы", "en": "FAQ" },
+    "subtitle": {
+      "ro": "Întrebări scurte, răspunsuri clare.",
+      "ru": "Короткие вопросы — понятные ответы.",
+      "en": "Short questions, clear answers."
+    },
+    "items": [
+      {
+        "q": { "ro": "Pot lucra cu dvs. dacă sunt în diaspora?", "ru": "Можно работать с вами, если я за границей?", "en": "Can I work with you if I’m abroad?" },
+        "a": { "ro": "Da. Consult online, analiză acte, procuri și pași concreți.", "ru": "Да. Онлайн-консультация, анализ документов, доверенности и шаги.", "en": "Yes. Online consult, document review, POAs and clear steps." }
+      },
+      {
+        "q": { "ro": "În cât timp primesc răspuns?", "ru": "Как быстро вы отвечаете?", "en": "How fast do you reply?" },
+        "a": { "ro": "De obicei rapid. WhatsApp: problema + țara.", "ru": "Обычно быстро. WhatsApp: проблема + страна.", "en": "Usually fast. WhatsApp: issue + country." }
+      },
+      {
+        "q": { "ro": "Ce documente să pregătesc?", "ru": "Какие документы подготовить?", "en": "What documents should I prepare?" },
+        "a": { "ro": "Depinde de caz. După primul mesaj îți trimit lista exactă.", "ru": "Зависит от ситуации. После сообщения пришлю список.", "en": "Depends on the case. After your first message I’ll send the list." }
+      }
+    ]
+  },
+  "diaspora": {
+    "title": { "ro": "Diaspora", "ru": "Диаспора", "en": "Diaspora" },
+    "subtitle": {
+      "ro": "Alege țara și intră pe pagina dedicată (ghid complet).",
+      "ru": "Выберите страну и откройте отдельную страницу (полный гид).",
+      "en": "Choose a country and open the dedicated page (full guide)."
+    },
+    "fallbackImage": "/images/diaspora-default.webp",
+    "items": [
+      {
+        "slug": "italia",
+        "name": { "ro": "Italia", "ru": "Италия", "en": "Italy" },
+        "desc": { "ro": "Ghid complet: divorț, pensie, partaj, custodie.", "ru": "Полный гид: развод, алименты, раздел имущества.", "en": "Full guide: divorce, support, asset division." },
+        "image": "/images/diaspora-italy.webp"
+      },
+      {
+        "slug": "franta",
+        "name": { "ro": "Franța", "ru": "Франция", "en": "France" },
+        "desc": { "ro": "Dosare diaspora în Franța — pași clari.", "ru": "Дела во Франции — понятные шаги.", "en": "France cases — clear steps." },
+        "image": "/images/diaspora-france.webp"
+      },
+      {
+        "slug": "germania",
+        "name": { "ro": "Germania", "ru": "Германия", "en": "Germany" },
+        "desc": { "ro": "Acte, strategii, reprezentare — Germania.", "ru": "Документы, стратегия — Германия.", "en": "Docs & strategy — Germany." },
+        "image": "/images/diaspora-germany.webp"
+      },
+      {
+        "slug": "marea-britanie",
+        "name": { "ro": "Marea Britanie", "ru": "Великобритания", "en": "United Kingdom" },
+        "desc": { "ro": "Ghid diaspora UK — divorț, copii, acte.", "ru": "Гид UK — развод, дети, документы.", "en": "UK guide — divorce, kids, docs." },
+        "image": "/images/diaspora-uk.webp"
+      },
+      {
+        "slug": "usa",
+        "name": { "ro": "USA", "ru": "США", "en": "USA" },
+        "desc": { "ro": "SUA — strategie, acte, pași online.", "ru": "США — стратегия и документы.", "en": "USA — strategy and docs." },
+        "image": "/images/diaspora-usa.webp"
+      },
+      {
+        "slug": "moldova",
+        "name": { "ro": "Moldova", "ru": "Молдова", "en": "Moldova" },
+        "desc": { "ro": "Reprezentare și consultații în Chișinău.", "ru": "Представительство и консультации в Кишинёве.", "en": "Representation and consults in Chișinău." },
+        "image": "/images/diaspora-moldova.webp"
+      }
+    ]
+  },
+  "gallery": {
+    "title": { "ro": "Galerie", "ru": "Галерея", "en": "Gallery" },
+    "subtitle": { "ro": "Apasă pe poză — se deschide full.", "ru": "Нажмите — откроется.", "en": "Click to open." },
+    "items": [
+      "/images/gallery-1.webp",
+      "/images/gallery-2.webp",
+      "/images/gallery-3.webp"
+    ]
+  }
 }
