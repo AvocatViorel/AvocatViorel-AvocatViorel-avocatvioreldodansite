@@ -1,206 +1,191 @@
 <!doctype html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0c10" />
-  <title>Avocat Viorel Dodan — ELITE EUROPE</title>
-  <meta name="description" content="Avocat Viorel Dodan — consultanță juridică și reprezentare în instanță. Diaspora & Chișinău." />
-  <meta property="og:title" content="Avocat Viorel Dodan — ELITE EUROPE" />
-  <meta property="og:description" content="Reprezentare juridică pentru diaspora și Chișinău." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/images/hero.webp" />
-  <link rel="stylesheet" href="/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avocat Viorel Dodan — ELITE EUROPE</title>
+<link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">VD</div>
-        <div class="brandtext">
-          <div class="name">Avocat Viorel Dodan</div>
-          <div class="tag">ELITE EUROPE</div>
-        </div>
-      </div>
 
-      <nav class="menu" aria-label="Meniu">
-        <a class="active" href="#acasa">Acasă</a>
-        <a href="#despre">Despre</a>
-        <a href="#servicii">Servicii</a>
-        <a href="#onorarii">Onorarii</a>
-        <a href="#faq">FAQ</a>
-        <a href="#diaspora">Diaspora</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<!-- ===== HEADER ===== -->
+<header class="topbar">
+  <div class="container nav">
 
-      <div class="lang">
-        <button class="active" type="button">RO</button>
-        <button type="button" disabled title="Se activează după ce adăugăm RU/EN">RU</button>
-        <button type="button" disabled title="Se activează după ce adăugăm RU/EN">EN</button>
+    <div class="brand">
+      <div class="logo">VD</div>
+      <div class="brandtext">
+        <div class="name">Avocat Viorel Dodan</div>
+        <div class="tag">ELITE EUROPE</div>
       </div>
     </div>
+
+    <nav class="menu">
+      <a href="#despre">Despre</a>
+      <a href="#servicii">Servicii</a>
+      <a href="#diaspora">Diaspora</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
   </div>
+</header>
 
-  <header id="acasa" class="hero">
-    <div class="container hero-inner">
-      <div class="kicker">
-        <span class="dot"></span>
-        <span data-bind="hero.kicker">Premium Dark</span>
-        <span class="pill" data-bind="hero.badge">Lux • Gold</span>
-      </div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
 
-      <h1 class="h1" data-bind="hero.title">Reprezentare juridică</h1>
-      <p class="sub" data-bind="hero.subtitle"></p>
-
-      <div class="cta">
-        <a class="btn primary" data-wa href="#"><span>Scrie pe WhatsApp</span></a>
-        <a class="btn ghost" href="tel:+37369968269"><span>Sună acum</span></a>
-        <a class="btn ghost" href="#contact"><span>Programare</span></a>
-      </div>
-
-      <div class="mini">
-        <div class="mini-card">
-          <div class="mini-title">Telefon</div>
-          <div class="mini-value">+373 699 682 69</div>
-        </div>
-        <div class="mini-card">
-          <div class="mini-title">Email</div>
-          <div class="mini-value">viorel.dodan@justice.md</div>
-        </div>
-        <div class="mini-card">
-          <div class="mini-title">Lucrez cu diaspora</div>
-          <div class="mini-value">Online + acte</div>
-        </div>
-      </div>
+    <div class="kicker">
+      <span class="dot"></span>
+      <span id="heroKicker">Consultanță juridică</span>
+      <span class="pill" id="heroBadge">ELITE EUROPE</span>
     </div>
-  </header>
 
-  <main>
-    <section id="despre" class="section">
-      <div class="container grid2">
-        <div class="card pad">
-          <h2 data-bind="about.title">Despre</h2>
-          <p data-bind="about.text"></p>
-          <ul class="list" data-about-bullets></ul>
-          <div class="hr"></div>
-          <p class="muted" data-bind="about.note"></p>
+    <h1 class="h1" id="heroTitle">
+      Avocat pentru Diaspora și Moldova
+    </h1>
+
+    <p class="sub" id="heroSub">
+      Soluții juridice clare. Strategii eficiente. Reprezentare profesionistă.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="#contact">Contact rapid</a>
+      <a class="btn" href="#servicii">Vezi servicii</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== DESPRE ===== -->
+<section class="section" id="despre">
+  <div class="container">
+
+    <div class="card grid2">
+
+      <div class="pad">
+        <div class="head">
+          <h2 id="aboutTitle">Despre mine</h2>
         </div>
 
-        <div class="card media">
-          <img src="/images/about.webp" alt="Avocat Viorel Dodan" loading="lazy" />
-          <div class="media-overlay">
-            <div class="media-title">ELITE EUROPE</div>
-            <div class="media-sub">Imagine premium, optimizată pentru mobil</div>
+        <p class="muted" id="aboutText"></p>
+
+        <ul class="list" id="aboutBullets"></ul>
+
+        <div class="mini">
+          <div class="mini-card">
+            <div class="mini-title">Experiență</div>
+            <div class="mini-value">Profesională</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-title">Consultanță</div>
+            <div class="mini-value">Online</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-title">Diaspora</div>
+            <div class="mini-value">Europa & SUA</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="servicii" class="section">
-      <div class="container">
-        <div class="head">
-          <h2 data-bind="services.title">Servicii</h2>
-          <p class="muted" data-bind="services.subtitle"></p>
-        </div>
-
-        <div class="cardgrid" data-services></div>
-      </div>
-    </section>
-
-    <section id="onorarii" class="section">
-      <div class="container">
-        <div class="card pad">
-          <h2 data-bind="fees.title">Onorarii</h2>
-          <p class="muted" data-bind="fees.text"></p>
-          <div class="hr"></div>
-          <div class="pricing" data-fees-cards></div>
+      <div class="media">
+        <img src="/images/about.webp" alt="">
+        <div class="media-overlay">
+          <div class="media-title">Avocat Viorel Dodan</div>
+          <div class="media-sub">ELITE EUROPE</div>
         </div>
       </div>
-    </section>
 
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="head">
-          <h2 data-bind="faq.title">FAQ</h2>
-          <p class="muted" data-bind="faq.subtitle"></p>
-        </div>
-        <div class="faq" data-faq></div>
-      </div>
-    </section>
-
-    <section id="diaspora" class="section">
-      <div class="container">
-        <div class="head">
-          <h2 data-bind="diaspora.title">Diaspora</h2>
-          <p class="muted" data-bind="diaspora.subtitle"></p>
-        </div>
-        <div class="cardgrid" data-diaspora></div>
-      </div>
-    </section>
-
-    <section id="galerie" class="section">
-      <div class="container">
-        <div class="head">
-          <h2 data-bind="gallery.title">Galerie</h2>
-          <p class="muted" data-bind="gallery.subtitle"></p>
-        </div>
-        <div class="gallery" data-gallery></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="card pad">
-          <h2>Contact</h2>
-          <p class="muted">Scrie-mi pe WhatsApp / Telegram / Viber sau sună direct.</p>
-
-          <div class="contact-grid">
-            <div class="contact-item">
-              <div class="contact-title">Telefon</div>
-              <a class="contact-val" href="tel:+37369968269">+373 699 682 69</a>
-            </div>
-            <div class="contact-item">
-              <div class="contact-title">Email</div>
-              <a class="contact-val" href="mailto:viorel.dodan@justice.md">viorel.dodan@justice.md</a>
-            </div>
-            <div class="contact-item">
-              <div class="contact-title">Website</div>
-              <div class="contact-val">www.vioreldodan.com</div>
-            </div>
-          </div>
-
-          <div class="hr"></div>
-
-          <div class="cta">
-            <a class="btn primary" data-wa href="#"><span>WhatsApp</span></a>
-            <a class="btn ghost" data-tg href="#"><span>Telegram</span></a>
-            <a class="btn ghost" data-vb href="#"><span>Viber</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="floatbar">
-    <a class="fab" data-wa href="#"><strong>WhatsApp</strong><span class="small">Mesaj rapid</span></a>
-    <a class="fab" data-tg href="#"><strong>Telegram</strong><span class="small">Mesaj</span></a>
-    <a class="fab" data-vb href="#"><strong>Viber</strong><span class="small">Chat</span></a>
-  </div>
-
-  <div class="lightbox" aria-hidden="true">
-    <button class="lb-close" type="button" aria-label="Închide">×</button>
-    <img alt="Preview" />
-  </div>
-
-  <footer class="footer">
-    <div class="container foot">
-      <div><strong class="gold">Avocat Viorel Dodan</strong> • ELITE EUROPE</div>
-      <div class="muted">© www.vioreldodan.com</div>
     </div>
-  </footer>
 
-  <script src="/main.js"></script>
+  </div>
+</section>
+
+<!-- ===== SERVICII ===== -->
+<section class="section" id="servicii">
+  <div class="container">
+    <div class="head">
+      <h2 id="servicesTitle">Servicii</h2>
+      <p class="muted" id="servicesSub"></p>
+    </div>
+
+    <div class="cardgrid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ===== DIASPORA ===== -->
+<section class="section" id="diaspora">
+  <div class="container">
+
+    <div class="head">
+      <h2 id="diasporaTitle">Diaspora</h2>
+      <p class="muted" id="diasporaSub"></p>
+    </div>
+
+    <div class="cardgrid" id="diasporaGrid"></div>
+
+  </div>
+</section>
+
+<!-- ===== GALERIE ===== -->
+<section class="section" id="galerie">
+  <div class="container">
+
+    <div class="head">
+      <h2 id="galleryTitle">Galerie</h2>
+      <p class="muted" id="gallerySub"></p>
+    </div>
+
+    <div class="gallery" id="galleryGrid"></div>
+
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+
+    <div class="card pad">
+
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-title">Telefon</div>
+          <a class="contact-val" id="phoneLink"></a>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-title">Email</div>
+          <a class="contact-val" id="emailLink"></a>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-title">Website</div>
+          <a class="contact-val" id="webLink"></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">×</button>
+  <img id="lbImg" src="">
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container foot">
+    <div>© <span class="gold">ELITE EUROPE</span> — Avocat Viorel Dodan</div>
+    <div>Consultanță juridică modernă</div>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
 </body>
 </html>
