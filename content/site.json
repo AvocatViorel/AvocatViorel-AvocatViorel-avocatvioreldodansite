@@ -124,7 +124,11 @@
 
   "faq": {
     "title": { "ro": "FAQ", "ru": "Вопросы и ответы", "en": "FAQ" },
-    "subtitle": { "ro": "Întrebări scurte, răspunsuri clare.", "ru": "Короткие вопросы — понятные ответы.", "en": "Short questions, clear answers." },
+    "subtitle": {
+      "ro": "Întrebări scurte, răspunsuri clare.",
+      "ru": "Короткие вопросы — понятные ответы.",
+      "en": "Short questions, clear answers."
+    },
     "items": [
       {
         "q": { "ro": "Pot lucra cu dvs. dacă sunt în diaspora?", "ru": "Можно работать с вами, если я за границей?", "en": "Can I work with you if I’m abroad?" },
@@ -132,7 +136,7 @@
       },
       {
         "q": { "ro": "În cât timp primesc răspuns?", "ru": "Как быстро вы отвечаете?", "en": "How fast do you reply?" },
-        "a": { "ro": "De obicei rapid. Trimite mesaj pe WhatsApp: problema + țara.", "ru": "Обычно быстро. WhatsApp: проблема + страна.", "en": "Usually fast. WhatsApp: issue + country." }
+        "a": { "ro": "De obicei rapid. WhatsApp: problema + țara.", "ru": "Обычно быстро. WhatsApp: проблема + страна.", "en": "Usually fast. WhatsApp: issue + country." }
       },
       {
         "q": { "ro": "Ce documente să pregătesc?", "ru": "Какие документы подготовить?", "en": "What documents should I prepare?" },
@@ -141,53 +145,53 @@
     ]
   },
 
-"diaspora": {
-  "title": { "ro": "Diaspora", "ru": "Диаспора", "en": "Diaspora" },
-  "subtitle": {
-    "ro": "Alege țara și intră pe pagina dedicată (ghid complet).",
-    "ru": "Выберите страну и откройте отдельную страницу (полный гид).",
-    "en": "Choose a country and open the dedicated page (full guide)."
+  "diaspora": {
+    "title": { "ro": "Diaspora", "ru": "Диаспора", "en": "Diaspora" },
+    "subtitle": {
+      "ro": "Alege țara și intră pe pagina dedicată (ghid complet).",
+      "ru": "Выберите страну и откройте отдельную страницу (полный гид).",
+      "en": "Choose a country and open the dedicated page (full guide)."
+    },
+    "fallbackImage": "/images/diaspora-default.webp",
+    "items": [
+      {
+        "slug": "italia",
+        "name": { "ro": "Italia", "ru": "Италия", "en": "Italy" },
+        "desc": { "ro": "Ghid complet: divorț, pensie, partaj, custodie.", "ru": "Полный гид: развод, алименты, раздел имущества.", "en": "Full guide: divorce, support, asset division." },
+        "image": "/images/diaspora-italy.webp"
+      },
+      {
+        "slug": "franta",
+        "name": { "ro": "Franța", "ru": "Франция", "en": "France" },
+        "desc": { "ro": "Dosare diaspora în Franța — pași clari.", "ru": "Дела во Франции — понятные шаги.", "en": "France cases — clear steps." },
+        "image": "/images/diaspora-france.webp"
+      },
+      {
+        "slug": "germania",
+        "name": { "ro": "Germania", "ru": "Германия", "en": "Germany" },
+        "desc": { "ro": "Acte, strategii, reprezentare — Germania.", "ru": "Документы, стратегия — Германия.", "en": "Docs & strategy — Germany." },
+        "image": "/images/diaspora-germany.webp"
+      },
+      {
+        "slug": "marea-britanie",
+        "name": { "ro": "Marea Britanie", "ru": "Великобритания", "en": "United Kingdom" },
+        "desc": { "ro": "Ghid diaspora UK — divorț, copii, acte.", "ru": "Гид UK — развод, дети, документы.", "en": "UK guide — divorce, kids, docs." },
+        "image": "/images/diaspora-uk.webp"
+      },
+      {
+        "slug": "usa",
+        "name": { "ro": "USA", "ru": "США", "en": "USA" },
+        "desc": { "ro": "SUA — strategie, acte, pași online.", "ru": "США — стратегия и документы.", "en": "USA — strategy and docs." },
+        "image": "/images/diaspora-usa.webp"
+      },
+      {
+        "slug": "moldova",
+        "name": { "ro": "Moldova", "ru": "Молдова", "en": "Moldova" },
+        "desc": { "ro": "Reprezentare și consultații în Chișinău.", "ru": "Представительство и консультации в Кишинёве.", "en": "Representation and consults in Chișinău." },
+        "image": "/images/diaspora-moldova.webp"
+      }
+    ]
   },
-  "fallbackImage": "/images/diaspora-default.webp",
-  "items": [
-    {
-      "slug": "italia",
-      "name": { "ro": "Italia", "ru": "Италия", "en": "Italy" },
-      "desc": { "ro": "Ghid complet: divorț, pensie, partaj, custodie.", "ru": "Полный гид: развод, алименты, раздел имущества.", "en": "Full guide: divorce, support, asset division." },
-      "image": "/images/diaspora-italy.webp"
-    },
-    {
-      "slug": "franta",
-      "name": { "ro": "Franța", "ru": "Франция", "en": "France" },
-      "desc": { "ro": "Dosare diaspora în Franța — pași clari.", "ru": "Дела во Франции — понятные шаги.", "en": "France cases — clear steps." },
-      "image": "/images/diaspora-france.webp"
-    },
-    {
-      "slug": "germania",
-      "name": { "ro": "Germania", "ru": "Германия", "en": "Germany" },
-      "desc": { "ro": "Acte, strategii, reprezentare — Germania.", "ru": "Документы, стратегия — Германия.", "en": "Docs & strategy — Germany." },
-      "image": "/images/diaspora-germany.webp"
-    },
-    {
-      "slug": "marea-britanie",
-      "name": { "ro": "Marea Britanie", "ru": "Великобритания", "en": "United Kingdom" },
-      "desc": { "ro": "Ghid diaspora UK — divorț, copii, acte.", "ru": "Гид UK — развод, дети, документы.", "en": "UK guide — divorce, kids, docs." },
-      "image": "/images/diaspora-uk.webp"
-    },
-    {
-      "slug": "usa",
-      "name": { "ro": "USA", "ru": "США", "en": "USA" },
-      "desc": { "ro": "SUA — strategie, acte, pași online.", "ru": "США — стратегия и документы.", "en": "USA — strategy and docs." },
-      "image": "/images/diaspora-usa.webp"
-    },
-    {
-      "slug": "moldova",
-      "name": { "ro": "Moldova", "ru": "Молдова", "en": "Moldova" },
-      "desc": { "ro": "Reprezentare și consultații în Chișinău.", "ru": "Представительство и консультации в Кишинёве.", "en": "Representation and consults in Chișinău." },
-      "image": "/images/diaspora-moldova.webp"
-    }
-  ]
-}
 
   "gallery": {
     "title": { "ro": "Galerie", "ru": "Галерея", "en": "Gallery" },
@@ -195,10 +199,7 @@
     "items": [
       "/images/gallery-1.webp",
       "/images/gallery-2.webp",
-      "/images/gallery-3.webp",
-      "/images/gallery-4.webp",
-      "/images/gallery-5.webp",
-      "/images/gallery-6.webp"
+      "/images/gallery-3.webp"
     ]
   }
 }
