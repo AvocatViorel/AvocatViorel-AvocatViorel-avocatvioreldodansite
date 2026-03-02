@@ -9,7 +9,6 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="topbar">
   <div class="container nav">
 
@@ -29,7 +28,6 @@
       <a href="#contact" id="navContact">Contact</a>
     </nav>
 
-    <!-- BUTOANE LIMBĂ (corect, în header) -->
     <div class="lang">
       <button type="button" id="btnRO" onclick="setLang('ro')">RO</button>
       <button type="button" id="btnRU" onclick="setLang('ru')">RU</button>
@@ -39,39 +37,32 @@
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container hero-inner">
     <div class="kicker">
       <span class="dot"></span>
-      <span id="heroKicker">Consultanță juridică</span>
-      <span class="pill" id="heroBadge">ELITE EUROPE</span>
+      <span id="heroKicker"></span>
+      <span class="pill" id="heroBadge"></span>
     </div>
 
-    <h1 class="h1" id="heroTitle">Reprezentare juridică</h1>
-    <p class="sub" id="heroSub">Strategie clară, comunicare rapidă.</p>
+    <h1 class="h1" id="heroTitle"></h1>
+    <p class="sub" id="heroSub"></p>
 
     <div class="cta">
       <a class="btn primary" href="#contact" id="ctaContact">Contact rapid</a>
-      <a class="btn" href="#servicii" id="ctaServices">Vezi servicii</a>
+      <a class="btn" href="#diaspora" id="ctaServices">Diaspora</a>
     </div>
   </div>
 </section>
 
-<!-- ===== DESPRE ===== -->
 <section class="section" id="despre">
   <div class="container">
     <div class="card grid2">
-
       <div class="pad">
-        <div class="head">
-          <h2 id="aboutTitle">Despre</h2>
-        </div>
-
+        <div class="head"><h2 id="aboutTitle"></h2></div>
         <p class="muted" id="aboutText"></p>
         <ul class="list" id="aboutBullets"></ul>
       </div>
-
       <div class="media">
         <img src="/images/about.webp" alt="">
         <div class="media-overlay">
@@ -79,64 +70,53 @@
           <div class="media-sub">ELITE EUROPE</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICII ===== -->
 <section class="section" id="servicii">
   <div class="container">
     <div class="head">
-      <h2 id="servicesTitle">Servicii</h2>
+      <h2 id="servicesTitle"></h2>
       <p class="muted" id="servicesSub"></p>
     </div>
-
     <div class="cardgrid" id="servicesGrid"></div>
   </div>
 </section>
 
-<!-- ===== DIASPORA ===== -->
 <section class="section" id="diaspora">
   <div class="container">
     <div class="head">
-      <h2 id="diasporaTitle">Diaspora</h2>
+      <h2 id="diasporaTitle"></h2>
       <p class="muted" id="diasporaSub"></p>
     </div>
-
     <div class="cardgrid" id="diasporaGrid"></div>
   </div>
 </section>
 
-<!-- ===== GALERIE ===== -->
 <section class="section" id="galerie">
   <div class="container">
     <div class="head">
-      <h2 id="galleryTitle">Galerie</h2>
+      <h2 id="galleryTitle"></h2>
       <p class="muted" id="gallerySub"></p>
     </div>
-
     <div class="gallery" id="galleryGrid"></div>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section class="section" id="contact">
   <div class="container">
     <div class="card pad">
       <h2 id="contactTitle">Contact</h2>
-
       <div class="contact-grid">
         <div class="contact-item">
           <div class="contact-title" id="contactPhoneLabel">Telefon</div>
           <a class="contact-val" id="phoneLink"></a>
         </div>
-
         <div class="contact-item">
           <div class="contact-title" id="contactEmailLabel">Email</div>
           <a class="contact-val" id="emailLink"></a>
         </div>
-
         <div class="contact-item">
           <div class="contact-title" id="contactWebLabel">Website</div>
           <a class="contact-val" id="webLink"></a>
@@ -146,13 +126,11 @@
   </div>
 </section>
 
-<!-- ===== LIGHTBOX ===== -->
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lb-close" id="lbClose" type="button" aria-label="Închide">×</button>
   <img id="lbImg" src="" alt="">
 </div>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container foot">
     <div>© <span class="gold">ELITE EUROPE</span> — Avocat Viorel Dodan</div>
@@ -161,12 +139,10 @@
 </footer>
 
 <script>
-/* ===== ELITE EUROPE — SINGLE FILE RENDERER ===== */
 const SITE_JSON = "/content/site.json";
 let SITE = null;
 let LANG = localStorage.getItem("lang") || "ro";
-
-function $(id){ return document.getElementById(id); }
+const $ = (id) => document.getElementById(id);
 
 function setLang(l){
   LANG = l;
@@ -174,74 +150,76 @@ function setLang(l){
   updateLangButtons();
   renderAll();
 }
-
 function updateLangButtons(){
   ["ro","ru","en"].forEach(k=>{
     const b = $("btn" + k.toUpperCase());
     if(!b) return;
-    if(k === LANG) b.classList.add("active");
-    else b.classList.remove("active");
+    b.classList.toggle("active", k === LANG);
   });
   document.documentElement.lang = LANG;
 }
-
-/* dacă un câmp e de forma {ro:..., ru:..., en:...} => ia limba curentă; altfel returnează valoarea */
 function pick(v){
-  if(v && typeof v === "object" && !Array.isArray(v) && (v.ro || v.ru || v.en)){
-    return v[LANG] || v.ro || v.en || v.ru || "";
+  if(v && typeof v === "object" && !Array.isArray(v) && ("ro" in v || "ru" in v || "en" in v)){
+    return v[LANG] ?? v.ro ?? v.en ?? v.ru ?? "";
   }
   return v ?? "";
 }
-
 function safeText(el, v){ if(el) el.textContent = (v ?? "").toString(); }
 
-function renderHero(){
-  // hero este special: hero.ro / hero.ru / hero.en
-  const h = (SITE && SITE.hero && SITE.hero[LANG]) ? SITE.hero[LANG] : null;
-  // fallback dacă cineva a rămas cu vechea structură hero.title:
-  const kicker = h?.kicker ?? SITE?.hero?.kicker ?? "";
-  const badge  = h?.badge  ?? SITE?.hero?.badge  ?? "";
-  const title  = h?.title  ?? SITE?.hero?.title  ?? "";
-  const sub    = h?.subtitle ?? SITE?.hero?.subtitle ?? "";
+function renderUiTexts(){
+  const ui = {
+    ro: { about:"Despre", services:"Servicii", diaspora:"Diaspora", gallery:"Galerie", contact:"Contact", cta1:"Contact rapid", cta2:"Diaspora", foot:"Consultanță juridică modernă", tel:"Telefon", mail:"Email", web:"Website" },
+    ru: { about:"Обо мне", services:"Услуги", diaspora:"Диаспора", gallery:"Галерея", contact:"Контакты", cta1:"Связаться", cta2:"Диаспора", foot:"Современная юридическая помощь", tel:"Телефон", mail:"Email", web:"Сайт" },
+    en: { about:"About", services:"Services", diaspora:"Diaspora", gallery:"Gallery", contact:"Contact", cta1:"Quick contact", cta2:"Diaspora", foot:"Modern legal support", tel:"Phone", mail:"Email", web:"Website" }
+  }[LANG];
 
-  safeText($("heroKicker"), kicker);
-  safeText($("heroBadge"), badge);
-  safeText($("heroTitle"), title);
-  safeText($("heroSub"), sub);
+  safeText($("navAbout"), ui.about);
+  safeText($("navServices"), ui.services);
+  safeText($("navDiaspora"), ui.diaspora);
+  safeText($("navGallery"), ui.gallery);
+  safeText($("navContact"), ui.contact);
+
+  safeText($("ctaContact"), ui.cta1);
+  safeText($("ctaServices"), ui.cta2);
+
+  safeText($("footerRight"), ui.foot);
+  safeText($("contactPhoneLabel"), ui.tel);
+  safeText($("contactEmailLabel"), ui.mail);
+  safeText($("contactWebLabel"), ui.web);
 }
 
+function renderHero(){
+  const h = SITE?.hero?.[LANG] || {};
+  safeText($("heroKicker"), pick(h.kicker));
+  safeText($("heroBadge"), pick(h.badge));
+  safeText($("heroTitle"), pick(h.title));
+  safeText($("heroSub"), pick(h.subtitle));
+}
 function renderAbout(){
-  safeText($("aboutTitle"), pick(SITE?.about?.title) || "Despre");
-  safeText($("aboutText"), pick(SITE?.about?.text) || "");
-
+  safeText($("aboutTitle"), pick(SITE?.about?.title));
+  safeText($("aboutText"), pick(SITE?.about?.text));
   const ul = $("aboutBullets");
-  if(!ul) return;
   ul.innerHTML = "";
-  const bullets = SITE?.about?.bullets || [];
-  bullets.forEach(b=>{
+  const bullets = pick(SITE?.about?.bullets) || [];
+  (Array.isArray(bullets) ? bullets : []).forEach(t=>{
     const li = document.createElement("li");
-    li.textContent = b;
+    li.textContent = t;
     ul.appendChild(li);
   });
 }
-
 function renderServices(){
-  safeText($("servicesTitle"), pick(SITE?.services?.title) || "Servicii");
-  safeText($("servicesSub"), pick(SITE?.services?.subtitle) || "");
-
+  safeText($("servicesTitle"), pick(SITE?.services?.title));
+  safeText($("servicesSub"), pick(SITE?.services?.subtitle));
   const grid = $("servicesGrid");
-  if(!grid) return;
   grid.innerHTML = "";
-
-  const items = SITE?.services?.items || [];
-  items.forEach(it=>{
+  (SITE?.services?.items || []).forEach(it=>{
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
       <div class="thumb">${it.image ? `<img src="${it.image}" alt="">` : ""}</div>
       <div class="pad">
-        <h3>${it.title || ""}</h3>
-        <p class="muted">${it.text || ""}</p>
+        <h3>${pick(it.title)}</h3>
+        <p class="muted">${pick(it.text)}</p>
       </div>
     `;
     grid.appendChild(card);
@@ -259,8 +237,6 @@ function renderDiaspora(){
 
   (SITE?.diaspora?.items || []).forEach(it=>{
     const img = it.image || fallback;
-
-    // slug obligatoriu: italia, franta, germania...
     const slug = it.slug || "";
     const href = slug ? `/diaspora/${slug}.html` : "#";
 
@@ -268,7 +244,6 @@ function renderDiaspora(){
     a.href = href;
     a.className = "card";
     a.style.display = "block";
-
     a.innerHTML = `
       <div class="thumb"><img src="${img}" alt=""></div>
       <div class="pad">
@@ -278,95 +253,50 @@ function renderDiaspora(){
         <div class="muted" style="font-size:13px">→ ${LANG === "ru" ? "Открыть страницу" : (LANG === "en" ? "Open page" : "Deschide pagina")}</div>
       </div>
     `;
-
     grid.appendChild(a);
   });
 }
 
 function renderGallery(){
-  safeText($("galleryTitle"), pick(SITE?.gallery?.title) || "Galerie");
-  safeText($("gallerySub"), pick(SITE?.gallery?.subtitle) || "");
-
+  safeText($("galleryTitle"), pick(SITE?.gallery?.title));
+  safeText($("gallerySub"), pick(SITE?.gallery?.subtitle));
   const grid = $("galleryGrid");
-  if(!grid) return;
   grid.innerHTML = "";
-
-  const items = SITE?.gallery?.items || [];
-  items.forEach((src, idx)=>{
+  (SITE?.gallery?.items || []).forEach(src=>{
     const a = document.createElement("a");
     a.href = "#";
-    a.dataset.src = src;
     a.innerHTML = `<img src="${src}" alt="" loading="lazy">`;
-    a.addEventListener("click", (e)=>{
-      e.preventDefault();
-      openLightbox(src);
-    });
+    a.addEventListener("click", (e)=>{ e.preventDefault(); openLightbox(src); });
     grid.appendChild(a);
   });
 }
-
 function renderContact(){
   const c = SITE?.contact || {};
   const phone = c.phone || "";
   const email = c.email || "";
   const web = c.website || "";
 
-  const phoneLink = $("phoneLink");
-  if(phoneLink){
-    phoneLink.textContent = phone;
-    phoneLink.href = phone ? `tel:${phone.replace(/\s+/g,"")}` : "#";
-  }
+  $("phoneLink").textContent = phone;
+  $("phoneLink").href = phone ? `tel:${phone.replace(/\s+/g,"")}` : "#";
 
-  const emailLink = $("emailLink");
-  if(emailLink){
-    emailLink.textContent = email;
-    emailLink.href = email ? `mailto:${email}` : "#";
-  }
+  $("emailLink").textContent = email;
+  $("emailLink").href = email ? `mailto:${email}` : "#";
 
-  const webLink = $("webLink");
-  if(webLink){
-    webLink.textContent = web;
-    webLink.href = web || "#";
-    webLink.target = "_blank";
-    webLink.rel = "noopener";
-  }
+  $("webLink").textContent = web;
+  $("webLink").href = web || "#";
+  $("webLink").target = "_blank";
+  $("webLink").rel = "noopener";
 }
 
-/* Lightbox */
 function openLightbox(src){
-  const lb = $("lightbox");
-  const img = $("lbImg");
-  if(!lb || !img) return;
-  img.src = src;
-  lb.classList.add("open");
-  lb.setAttribute("aria-hidden","false");
+  $("lbImg").src = src;
+  $("lightbox").classList.add("open");
+  $("lightbox").setAttribute("aria-hidden","false");
 }
 function closeLightbox(){
-  const lb = $("lightbox");
-  const img = $("lbImg");
-  if(!lb || !img) return;
-  lb.classList.remove("open");
-  lb.setAttribute("aria-hidden","true");
-  img.src = "";
-}
-
-/* small UI translations (meniul + butoane) */
-function renderUiTexts(){
-  const ui = {
-    ro: { about:"Despre", services:"Servicii", diaspora:"Diaspora", gallery:"Galerie", contact:"Contact", cta1:"Contact rapid", cta2:"Vezi servicii", foot:"Consultanță juridică modernă" },
-    ru: { about:"Обо мне", services:"Услуги", diaspora:"Диаспора", gallery:"Галерея", contact:"Контакты", cta1:"Связаться", cta2:"Смотреть услуги", foot:"Современная юридическая помощь" },
-    en: { about:"About", services:"Services", diaspora:"Diaspora", gallery:"Gallery", contact:"Contact", cta1:"Quick contact", cta2:"View services", foot:"Modern legal support" }
-  }[LANG] || ui?.ro;
-
-  safeText($("navAbout"), ui.about);
-  safeText($("navServices"), ui.services);
-  safeText($("navDiaspora"), ui.diaspora);
-  safeText($("navGallery"), ui.gallery);
-  safeText($("navContact"), ui.contact);
-
-  safeText($("ctaContact"), ui.cta1);
-  safeText($("ctaServices"), ui.cta2);
-  safeText($("footerRight"), ui.foot);
+  $("lightbox").classList.remove("open");
+  $("lightbox").setAttribute("aria-hidden","true");
+  $("lbImg").src = "";
 }
 
 function renderAll(){
@@ -390,20 +320,12 @@ async function loadSite(){
 
 document.addEventListener("DOMContentLoaded", ()=>{
   updateLangButtons();
-
-  $("lbClose")?.addEventListener("click", closeLightbox);
-  $("lightbox")?.addEventListener("click", (e)=>{
-    if(e.target && e.target.id === "lightbox") closeLightbox();
-  });
-  window.addEventListener("keydown", (e)=>{
-    const lb = $("lightbox");
-    if(lb && lb.classList.contains("open") && e.key === "Escape") closeLightbox();
-  });
-
+  $("lbClose").addEventListener("click", closeLightbox);
+  $("lightbox").addEventListener("click", (e)=>{ if(e.target && e.target.id === "lightbox") closeLightbox(); });
+  window.addEventListener("keydown", (e)=>{ if($("lightbox").classList.contains("open") && e.key === "Escape") closeLightbox(); });
   loadSite().catch(err=>{
     console.error(err);
-    // dacă JSON e stricat sau lipsește:
-    alert("Eroare: nu pot încărca content/site.json. Verifică dacă JSON este valid și există în /content/site.json");
+    alert("Eroare: nu pot încărca content/site.json. Verifică dacă JSON este valid.");
   });
 });
 </script>
