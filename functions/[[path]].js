@@ -1,4 +1,14 @@
-import {DEFAULT_SITE, DEFAULT_COUNTRIES, DEFAULT_ARTICLES} from './defaults.js';
+export async function onRequest(context) {
+  const url = new URL(context.request.url);
+  const path = url.pathname;
+
+  // ✅ Admin = fișiere statice, NU route dinamic
+  if (path === "/admin" || path.startsWith("/admin/")) {
+    return context.next();
+  }
+
+  // ... restul codului tău existent
+}import {DEFAULT_SITE, DEFAULT_COUNTRIES, DEFAULT_ARTICLES} from './defaults.js';
 
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
