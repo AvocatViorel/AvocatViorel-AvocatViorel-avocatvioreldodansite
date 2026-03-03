@@ -1,4 +1,4 @@
-import {DEFAULT_SITE, DEFAULT_COUNTRIES, DEFAULT_ARTICLES} from '../_defaults.js';
+import {DEFAULT_SITE, DEFAULT_COUNTRIES, DEFAULT_ARTICLES} from '../defaults.js';
 export async function onRequestPost({request, env}) {
   const kv = env.CONTENT;
   const body = await request.json();
