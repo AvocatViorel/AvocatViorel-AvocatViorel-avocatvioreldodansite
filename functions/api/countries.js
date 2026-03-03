@@ -1,4 +1,4 @@
-import {DEFAULT_COUNTRIES} from '../_defaults.js';
+import {DEFAULT_COUNTRIES} from '../defaults.js';
 export async function onRequestGet({env}) {
   const kv = env.CONTENT;
   let data = null;
