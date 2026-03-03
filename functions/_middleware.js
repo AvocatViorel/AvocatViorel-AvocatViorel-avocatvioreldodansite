@@ -5,8 +5,8 @@ export async function onRequest({request, env, next}) {
   const protect = path.startsWith('/admin') || path === '/api/save' || path === '/api/reset';
   if (!protect) return next();
 
-  const u = env.ADMIN_USER || '';
-  const p = env.ADMIN_PASS || '';
+  const u = env.viorel || '';
+  const p = env.parazit23@ || '';
   if (!u || !p) return next(); // if not set, allow
 
   const h = request.headers.get('authorization') || '';
