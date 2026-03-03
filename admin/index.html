@@ -31,7 +31,25 @@
     code{color:var(--gold)}
   </style>
 </head>
-<body>
+<body><script>
+(function () {
+
+  const PASS = "ELITE2026"; // ← parola ta (poți schimba)
+
+  const ok = sessionStorage.getItem("admin_ok");
+
+  if (ok !== "yes") {
+    const p = prompt("Admin login — introdu parola:");
+    if (p !== PASS) {
+      alert("Acces refuzat.");
+      window.location.href = "/";
+      return;
+    }
+    sessionStorage.setItem("admin_ok","yes");
+  }
+
+})();
+</script>
   <div class="topbar">
     <div class="container nav">
       <div class="brand">
